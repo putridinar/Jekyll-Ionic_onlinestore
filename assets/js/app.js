@@ -170,17 +170,3 @@ closeButton.addEventListener("click", () => {
   setLastShownTime();
 });
 
-
-function setCookie() {
-	document.cookie = "cookieNotificationShown=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
-	document.querySelector(".popup-container").style.display = "none";
-}
-
-function checkCookie() {
-	if (document.cookie.indexOf("cookieNotificationShown=true") == -1) {
-		document.querySelector(".popup-container").style.display = "flex";
-	}
-}
-
-window.onload = checkCookie;
-
